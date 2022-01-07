@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:zartek_sample/others/routes.dart';
 import 'package:zartek_sample/providers/cart_provider.dart';
+import 'package:zartek_sample/resources/assets.dart';
 import 'package:zartek_sample/utilities/utilities.dart';
 import 'package:zartek_sample/widgets/green_red_circle_container.dart';
 
@@ -127,11 +128,11 @@ class ListViewItems extends StatelessWidget {
                       width: 5,
                     ),
                     SizedBox(
-                        height: 70,
-                        width: 70,
-                        child: Image.network(
-                          imageUrl,
-                          scale: 3.0,
+                        height: 60,
+                        width: 60,
+                        child: FadeInImage(
+                          image: NetworkImage(imageUrl),
+                          placeholder: AssetImage(kPlaceHolder),
                           fit: BoxFit.cover,
                         ))
                   ],
